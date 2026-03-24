@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'weather_station'
 ]
 
 MIDDLEWARE = [
@@ -86,16 +87,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'localCosas',
         'USER': 'postgres',
-        'PASSWORD': os.getenv('LOCAL_DB_PASSWORD'), # 👈 Lee del .env
+        'PASSWORD': os.getenv('LOCAL_DB_PASSWORD'), # Lee del .env
         'HOST': '127.0.0.1',
         'PORT': '5432',
     },
     'supabase': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': os.getenv('SUPABASE_DB_USER'),      # 👈 Lee del .env
-        'PASSWORD': os.getenv('SUPABASE_DB_PASSWORD'), # 👈 Lee del .env
-        'HOST': os.getenv('SUPABASE_DB_HOST'),      # 👈 Lee del .env
+        'USER': os.getenv('SUPABASE_DB_USER'),      # Lee del .env
+        'PASSWORD': os.getenv('SUPABASE_DB_PASSWORD'), # Lee del .env
+        'HOST': os.getenv('SUPABASE_DB_HOST'),      # Lee del .env
         'PORT': '6543',
     }
 }
